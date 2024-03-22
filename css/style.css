@@ -1,0 +1,354 @@
+body {
+    background-color: black;
+    padding: 0;
+    margin: 0;
+}
+body::-webkit-scrollbar{
+    margin: 0.5px;
+    width: 0.5px;
+    height: 12px !important;    
+    cursor: none;
+}
+
+div[id^="section"] {
+    padding-top: 100px; 
+}
+h1{
+    font-family: "Audiowide";
+    font-weight: 700;
+    display: flex;
+    justify-content: center
+}
+h2{
+    font-family: "Audiowide";
+    font-weight: 500;
+    display: flex;
+    justify-content: center
+}
+h3{
+    display: flex;
+    justify-content: center;
+    font-family: "Audiowide";
+    font-weight: 300;
+}
+h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif ;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------
+                                                NAVIGATION BAR
+--------------------------------------------------------------------------------------------------------------------------------*/
+nav{
+    position: fixed;
+    z-index: 9999;
+    width: 100vw;
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,.05);
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+}
+nav ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 7vw;
+    align-items: center;
+}
+nav ul li{
+    margin: 0 10px;
+}
+nav ul li a{
+    text-decoration: none;
+    font-family: "Audiowide";
+    /* color: ghostwhite; */
+    color: goldenrod;
+    transition: color 0.3s ease;
+    position: relative; /* Required for positioning the indicator */
+    transition: color 0.3s ease;
+}
+nav a:hover {
+    border-bottom: 2px solid #cae6f8;
+  }
+.active a::after {
+    content: ""; /* Create the indicator */
+    position: absolute; /* Position the indicator relative to the link */
+    bottom: -3px; /* Adjust the distance from the text */
+    left: 0; /* Start from the left edge of the link */
+    width: 100%; /* Make the indicator span the width of the link */
+    height: 2px; /* Set the height of the indicator */
+    background-color: rgba(255, 255, 255, 0.7); /* Indicator color */
+    transition: width 0.3s ease; /* Smooth transition for width change */
+}
+nav h1{
+    text-align: center;
+    text-shadow: 3px 3px 3px #bebebe; 
+    color: skyblue;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------
+                                                SECTION BAR
+--------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------
+                                                HOME SECTION
+--------------------------------------------------------------------------------------------------------------------------------*/
+#section1{
+    position: relative;
+    top: -100px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+#section1 iframe{
+    z-index: 99;
+    position: absolute;
+    top: 20%;
+    width: 600px;
+    height: 500px;
+}
+#section1 iframe:last-child{
+    position: absolute;
+    top: 45vh;
+    width: 80%;
+}
+#section1 img{
+    height: 100vh;
+    width: 100vw;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------
+                                                SECTION 2
+--------------------------------------------------------------------------------------------------------------------------------*/
+#section2{
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+}
+#section2 h1{
+    font-size: 50px;
+    text-decoration:  underline;
+    margin-bottom: 40px
+}
+#section2 p{
+    font-size: 24px;
+    margin: 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    word-spacing: 1.5px;
+}
+/*-------------------------------------------------------------------------------------------------------------------------------
+                                                SECTION 3
+--------------------------------------------------------------------------------------------------------------------------------*/
+#section3 {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.3s ease;
+    background-color: white;
+}
+
+.slide {
+    flex: 0 0 100%;
+}
+
+.slide iframe {
+    width: 100%;
+    height: 300px; /* Adjust height as needed */
+    border: none;
+}
+
+.btn-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.btn {
+    background-color: skyblue;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.slide p{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+.slide .list-1{
+    position: relative;
+    left: 20vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 40vw;
+}
+.slide .list-1 li{
+    list-style-type:  decimal;
+    margin-bottom: 10px;
+}
+.slide .list-2{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    left: 60vw;
+    right: 20vw;
+    top: -5.2vh;
+    margin-top: -5.1rem;
+}
+
+.slide .list-2 li{
+    list-style-type: decimal;
+    margin-bottom: 10px;
+}
+.slide .list-2 li ul li{
+    list-style-type: circle;
+    margin-bottom: 10px
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------
+                                                SECTION 4
+--------------------------------------------------------------------------------------------------------------------------------*/
+#section4{
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    margin: 0;
+}
+#section4 h1{
+    font-size: 50px;
+    text-decoration: underline;
+}
+#section4 h2{
+    text-decoration: underline;
+}
+#section4 h3{
+    margin: -1rem;
+}
+#section4 .details{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+#section4 .details a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding:0 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#section4 .details a:nth-child(1){
+    background-color: gray;
+}
+#section4 .details a:nth-child(2){
+    background-color: rgb(128, 146, 248);
+}
+#section4 .details a i{
+    margin: 5px;
+    padding: 8px;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------
+                                                SECTION 5
+--------------------------------------------------------------------------------------------------------------------------------*/
+#section5{
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    gap: 5px;
+}
+#section5 h1{
+    font-size: 50px;
+    text-decoration: underline;
+}
+#section5 h2{
+    text-decoration: underline;
+}
+#section5 h3{
+    margin: -1rem;
+}
+#section5 .list-1{
+    position: relative;
+    left: 5vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 40vw;
+}
+#section5 .list-2{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    left: 65vw;
+    right: 20vw;
+    top: -5.2vh;
+    margin-top: -14rem;
+}
+#section5 .list-2 h4{
+    margin-left: -1.5rem;
+}
+.contact h4{
+    font-family: 'Times New Roman', Times, serif ;
+    margin-top: -1rem;
+}
+#section5 .list-1 .social-media{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap:  3rem;
+}
+#section5 .list-2 .social-media{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+#section5 .social-media a{
+    text-decoration: none;
+    font-size: 35px;
+    color: white;
+    border-radius: 10%;
+    padding: 5px 5px 0;
+}
+#section5 .social-media a:nth-child(1){
+    background-color: green;
+}
+#section5 .social-media a:nth-child(2){
+    background-color: skyblue;
+}
+#section5 .social-media a:nth-child(3){
+    background-color: black;
+}
